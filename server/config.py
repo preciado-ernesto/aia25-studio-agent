@@ -5,6 +5,9 @@ from server.keys import *
 # Mode
 mode = "local" # "local" or "openai" or "cloudflare"
 
+# OPENAI_API_KEY = "sk-..." # OpenAI API key
+# CLOUDFLARE_API_KEY = "..." # Cloudflare API key
+# CLOUDFLARE_ACCOUNT_ID = "..." # Cloudflare account ID
 # API
 local_client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")
 openai_client = OpenAI(api_key=OPENAI_API_KEY)
