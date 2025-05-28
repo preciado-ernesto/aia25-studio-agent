@@ -9,9 +9,10 @@ app = Flask(__name__)
 def llm_call():
     data = request.get_json()
     input_string = data.get('input', '')
-
+    
     # answer = classify_input(input_string)
-    answer = define_window_size(input_string)
+    # answer = define_window_size(input_string)
+    answer = update_window(input_string)
 
     return jsonify({'response': answer})
 
