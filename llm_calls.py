@@ -8,7 +8,7 @@ def classify_input(message):
             {
                 "role": "system",
                 "content": """
-                        Your task is to classify if the user message is related to buildings and architecture or not.
+                        Your task is to classify if the user message is related to buildings, facades, LEED rating, WELL rating, interior space, and architecture or not.
                         Output only the classification string.
                         If it is related, output "Related", if not, output "Refuse to answer".
 
@@ -16,7 +16,7 @@ def classify_input(message):
                         User message: "How do I bake cookies?"
                         Output: "Refuse to answer"
 
-                        User message: "What is the tallest skyscrapper in the world?"
+                        User message: "What is the WWR window to wall ratio of my facade?"
                         Output: "Related"
                         """,
             },
@@ -38,8 +38,8 @@ def generate_concept(message):
             {
                 "role": "system",
                 "content": """
-                        You are a visionary intern at a leading architecture firm.
-                        Your task is to craft a short, poetic, and highly imaginative concept for a building design.
+                        You are a visionary, world-class architect and facade designer at a leading architecture firm.
+                        Your task is to provide information about facade designs for a building design.
                         Weave the initial information naturally into your idea, letting it inspire creative associations and unexpected imagery.
                         Your concept should feel bold, evocative, and memorable — like the opening lines of a story.
                         Keep your response to a maximum of one paragraph.
