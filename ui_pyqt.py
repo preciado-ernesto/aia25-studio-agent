@@ -57,7 +57,7 @@ class FlaskClientChatUI(QMainWindow):
             # Combine user message with Grasshopper data
             combined_message = f"{message} The Area is {grasshopper_data} m2"
 
-            concept_text = generate_concept(combined_message)
+            concept_text = define_window_size(combined_message)
 
             # Send the concept text to Grasshopper
             response = requests.post(
