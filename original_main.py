@@ -3,7 +3,7 @@ from llm_calls import *
 from utils.rag_utils import rag_call
 import json
 
-user_message = "What is the optimal window to wall ratio for this facade?"
+user_message = "How do architects balance form and function?"
 
 ### EXAMPLE 1: Router ###
 # Classify the user message to see if we should answer or not
@@ -29,11 +29,11 @@ else:
     shape, theme, materials = (attributes[k] for k in ("shape", "theme", "materials"))
 
     ### EXAMPLE 3: Chaining ###
-    facade_question = create_question(theme)
-    print(facade_question)
+    brutalist_question = create_question(theme)
+    print(brutalist_question)
     # call llm with the output of a previous call
 
     ### EXAMPLE 5: RAG ####
     # Get a response based on the knowledge found
-    rag_result= rag_call(facade_question, embeddings = "knowledge/LEED_embeddings.json", n_results = 10)
+    rag_result= rag_call(brutalist_question, embeddings = "knowledge/brutalism_embeddings.json", n_results = 10)
     print(rag_result)
