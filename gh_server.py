@@ -13,7 +13,7 @@ def llm_call():
     data = request.get_json()
     input_string = data.get('input', '')
 
-    answer = define_window_size(input_string)
+    answer = define_window_ratio(input_string)
 
     return jsonify({'response': answer})
 
